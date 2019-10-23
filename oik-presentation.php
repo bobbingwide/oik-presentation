@@ -1,14 +1,14 @@
 <?php 
 /*
 Plugin Name: oik-presentation
-Plugin URI: http://www.oik-plugins.com/oik-presentation
+Plugin URI: https://www.oik-plugins.com/oik-presentation
 Description: Presentation slides as WordPress custom post type
-Version: 1.1
+Version: 2.0.0
 Author: bobbingwide
-Author URI: http://www.bobbingwide.com
+Author URI: https://www.bobbingwide.com/about-bobbing-wide
 License: GPL2
 
-    Copyright 2012-2013 Bobbing Wide (email : herb@bobbingwide.com )
+    Copyright 2012-2013, 2019 Bobbing Wide (email : herb@bobbingwide.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 2,
@@ -61,7 +61,8 @@ function oik_presentation_register_oik_presentation() {
   $post_type_args['description'] = __('oik presentation pages');
   
   // We don't need custom-fields if we define our own! 
-  $post_type_args['supports'] = array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail' );
+  $post_type_args['supports'] = array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author', 'revisions' );
+  $post_type_args[ 'show_in_rest'] = true;
   // (menu order, hierarchical must be true to show Parent option)
   bw_register_post_type( $post_type, $post_type_args );
   bw_register_field( "_oikp_notes", "textarea", __( "Notes" ) ); 
