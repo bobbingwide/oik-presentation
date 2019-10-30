@@ -4,7 +4,7 @@ Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags: shortcodes, smart, lazy, custom post type, CPT
 Requires at least: 5.2
 Tested up to: 5.3-RC2
-Stable tag: VERSION
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: oik-presentation
@@ -26,7 +26,8 @@ Use in conjunction with the oobit theme.
 
 == Upgrade Notice ==
 = 2.0.0 = 
-Upgrade to support the WordPress block editor
+Upgrade to support the WordPress block editor. 
+You may also need to upgrade the theme to oobit v2.0.0.
 
 = 1.1 = 
 Depends on oik base plugin v2.1-alpha or higher and oik-fields v1.19.0905 or higher
@@ -37,6 +38,7 @@ Depends on oik and oik-fields
 == Changelog == 
 = 2.0.0 = 
 * Changed: Support the WordPress block editor,[github bobbingwide oik-presentation issues 1]
+* Changed: Eliminate most of the code in oik_presentation_footer,[github bobbingwide oik-presentation issues 2]
 * Changed: Now depends on oik v3.3.7 and oik-fields v1.51.0
 * Tested: With WordPress 5.2 and WordPress Multi Site
 * Tested: With WordPres 5.3-RC2
