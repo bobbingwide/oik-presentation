@@ -101,6 +101,11 @@ function oikp_editCSS() {
 
 /**
  * Implement "admin_notices" for oik-presentation to check plugin dependency
+ *
+ * Version | Depends
+ * ------- | -------------
+ * v1.1    | oik 2.1-alpha, oik-fields 1.19.0905
+ * v2.0.0  | oik 3.3.7, oik-fields 1.51.0
  */ 
 function oik_presentation_activation() {
   static $plugin_basename = null;
@@ -109,7 +114,7 @@ function oik_presentation_activation() {
     add_action( "after_plugin_row_" . $plugin_basename, __FUNCTION__ );   
     require_once( "admin/oik-activation.php" );
   }  
-  $depends = "oik:2.1-alpha,oik-fields:1.19.0905";
+  $depends = "oik:3.3.7,oik-fields:1.51.0";
   oik_plugin_lazy_activation( __FILE__, $depends, "oik_plugin_plugin_inactive" );
 }
 
@@ -127,15 +132,16 @@ function oik_presentation_navigation() {
  * - An audio commentary on the page
  * - The oik Edit css button
  * - Copyright statement
- * - "wtf" output - showing how to page was constructed
+ * - Optionally, "wtf" output - showing how the page was constructed
  * - Notes:
  */
 function oik_presentation_footer() {
-  e( do_shortcode( "[audio]" )); 
-  oikp_editCSS();
-  e( bw_copyright());  
-  oik_require( "shortcodes/oik-wtf.php" );   
-  e( bw_wtf()); 
+  //e( do_shortcode( "[audio]" ));
+  //oikp_editCSS();
+  //e( bw_follow_me() );
+  //e( bw_copyright());
+  //oik_require( "shortcodes/oik-wtf.php" );
+  //e( bw_wtf());
   oik_require( "shortcodes/oik-fields.php", "oik-fields" );
   e( bw_metadata( array( "fields" => '_oikp_notes')) );   
   bw_flush();

@@ -1,9 +1,9 @@
 === oik-presentation ===
 Contributors: bobbingwide
-Donate link: http://www.oik-plugins.com/oik/oik-donate/
-Tags: shortcodes, smart, lazy
-Requires at least: 3.5
-Tested up to: 3.6.1
+Donate link: https://www.oik-plugins.com/oik/oik-donate/
+Tags: shortcodes, smart, lazy, custom post type, CPT
+Requires at least: 5.2
+Tested up to: 5.3-RC2
 Stable tag: VERSION
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,9 @@ Use in conjunction with the oobit theme.
 1. oik-presentation in action
 
 == Upgrade Notice ==
+= 2.0.0 = 
+Upgrade to support the WordPress block editor
+
 = 1.1 = 
 Depends on oik base plugin v2.1-alpha or higher and oik-fields v1.19.0905 or higher
 
@@ -32,6 +35,13 @@ Depends on oik base plugin v2.1-alpha or higher and oik-fields v1.19.0905 or hig
 Depends on oik and oik-fields
 
 == Changelog == 
+= 2.0.0 = 
+* Changed: Support the WordPress block editor,[github bobbingwide oik-presentation issues 1]
+* Changed: Now depends on oik v3.3.7 and oik-fields v1.51.0
+* Tested: With WordPress 5.2 and WordPress Multi Site
+* Tested: With WordPres 5.3-RC2
+* Tested: With PHP 7.3
+
 = 1.1 =
 * Added: Implements action hook "oik_presentation_footer"
 * Added: Implements action hook "oik_presentation_navigation"
@@ -43,6 +53,6 @@ Depends on oik and oik-fields
 
 == Further reading ==
 If you want to read more about the oik plugins then please visit the
-[oik plugin](http://www.oik-plugins.com/oik) 
+[oik plugin](https://www.oik-plugins.com/oik) 
 **"the oik plugin - for often included key-information"**
 

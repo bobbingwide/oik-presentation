@@ -1,18 +1,19 @@
-<?php // (C) Copyright Bobbing Wide 2012
+<?php // (C) Copyright Bobbing Wide 2012, 2019
 /**
- * Create a nav menu for oik-presntation slides
+ * Create a nav menu for oik-preentation slides
  */
 function oikp_lazy_nav( $post ) {
   bw_trace2(); 
   stag( "nav", null, "navsingle" );
   h3( "Post navigation", "assistive-text" );
-  $oobit = site_url(); 
+  $oobit = site_url();
+  alink( "home", $oobit, "home" );
   /* We need a better way of determining the Table of Contents (TOC) for a particular presentation. **?** */ 
   alink( "toc",  $oobit . "/oik-presentations/table-of-contents", "TOC" );  
-  alink( "home", $oobit, "home" );
+
   $up = get_permalink( $post->post_parent ); 
   alink( "up", $up , "up" );
-  oik_require( "includes/bw_posts.inc" );
+  oik_require( "includes/bw_posts.php" );
   $next = oikp_next( $post );
   alink( "next", $next , "next" );
   
