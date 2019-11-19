@@ -61,7 +61,7 @@ function oik_presentation_register_oik_presentation() {
   $post_type_args['description'] = __('oik presentation pages');
   
   // We don't need custom-fields if we define our own! 
-  $post_type_args['supports'] = array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author', 'revisions' );
+  $post_type_args['supports'] = array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author', 'revisions', 'clone' );
   $post_type_args[ 'show_in_rest'] = true;
   // (menu order, hierarchical must be true to show Parent option)
   bw_register_post_type( $post_type, $post_type_args );
