@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="3" assertions="3" errors="1" warnings="0" failures="0" skipped="0" time="0.250823">
+    <testsuite name="oik-presentation" tests="3" assertions="3" errors="1" warnings="0" failures="0" skipped="0" time="0.250823">
+      <testsuite name="Tests_load_libs" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\tests\test-a-load-php.php" tests="3" assertions="3" errors="1" warnings="0" failures="0" skipped="0" time="0.250823">
+        <testcase name="test_load_admin" class="Tests_load_libs" classname="Tests_load_libs" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\tests\test-a-load-php.php" line="25" assertions="1" time="0.223032"/>
+        <testcase name="test_load_includes" class="Tests_load_libs" classname="Tests_load_libs" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\tests\test-a-load-php.php" line="32" assertions="1" time="0.010106"/>
+        <testcase name="test_load_plugin" class="Tests_load_libs" classname="Tests_load_libs" file="C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\tests\test-a-load-php.php" line="55" assertions="1" time="0.017685">
+          <error type="PHPUnit\Framework\OutputError">Tests_load_libs::test_load_plugin
+This test printed output: 
+Deprecated: Using ${var} in strings is deprecated, use {$var} instead in C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\oik-presentation.php on line 70
+
+Deprecated: Using ${var} in strings is deprecated, use {$var} instead in C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\oik-presentation.php on line 71</error>
+          <system-out>
+Deprecated: Using ${var} in strings is deprecated, use {$var} instead in C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\oik-presentation.php on line 70
+
+Deprecated: Using ${var} in strings is deprecated, use {$var} instead in C:\apache\htdocs\wordpress\wp-content\plugins\oik-presentation\oik-presentation.php on line 71
+</system-out>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
