@@ -3,8 +3,8 @@ Contributors: bobbingwide
 Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags: shortcodes, smart, lazy, custom post type, CPT
 Requires at least: 5.2
-Tested up to: 5.3-RC2
-Stable tag: 2.0.0
+Tested up to: 6.4.1
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: oik-presentation
@@ -25,6 +25,9 @@ Use in conjunction with the oobit theme.
 1. oik-presentation in action
 
 == Upgrade Notice ==
+= 2.0.1 =
+Update for support for PHP 8.1 and PHP 8.2 
+
 = 2.0.0 = 
 Upgrade to support the WordPress block editor. 
 You may also need to upgrade the theme to oobit v2.0.0.
@@ -36,6 +39,12 @@ Depends on oik base plugin v2.1-alpha or higher and oik-fields v1.19.0905 or hig
 Depends on oik and oik-fields
 
 == Changelog == 
+= 2.0.1 =
+* Changed: Add PHPUnit tests for support PHP 8.1 and PHP 8.2,,[github bobbingwide oik-presentation issues 3]
+* Tested: With WordPress 6.4.1 and WordPress Multisite
+* Tested: With PHP 8.1 and PHP 8.2
+* Tested: With PHPUnit 9.6
+
 = 2.0.0 = 
 * Changed: Support the WordPress block editor,[github bobbingwide oik-presentation issues 1]
 * Changed: Eliminate most of the code in oik_presentation_footer,[github bobbingwide oik-presentation issues 2]
