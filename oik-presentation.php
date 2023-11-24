@@ -3,12 +3,12 @@
 Plugin Name: oik-presentation
 Plugin URI: https://www.oik-plugins.com/oik-presentation
 Description: Presentation slides as WordPress custom post type
-Version: 2.0.0
+Version: 2.0.1
 Author: bobbingwide
 Author URI: https://www.bobbingwide.com/about-bobbing-wide
 License: GPL2
 
-    Copyright 2012-2013, 2019 Bobbing Wide (email : herb@bobbingwide.com )
+    Copyright 2012-2013, 2019, 2023 Bobbing Wide (email : herb@bobbingwide.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 2,
@@ -67,8 +67,8 @@ function oik_presentation_register_oik_presentation() {
   bw_register_post_type( $post_type, $post_type_args );
   bw_register_field( "_oikp_notes", "textarea", __( "Notes" ) ); 
   bw_register_field_for_object_type( "_oikp_notes", $post_type );
-  add_action( "manage_${post_type}_posts_custom_column", "bw_custom_column_admin", 10, 2 );
-  add_filter( "oik_table_titles_${post_type}", "oik_presentation_columns", 10, 3 ); 
+  add_action( "manage_{$post_type}_posts_custom_column", "bw_custom_column_admin", 10, 2 );
+  add_filter( "oik_table_titles_{$post_type}", "oik_presentation_columns", 10, 3 ); 
 }
 
 /**
