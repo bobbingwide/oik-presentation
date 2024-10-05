@@ -4,8 +4,8 @@
 * Donate link: https://www.oik-plugins.com/oik/oik-donate/
 * Tags: shortcodes, smart, lazy, custom post type, CPT
 * Requires at least: 5.2
-* Tested up to: 6.4.1
-* Stable tag: 2.0.1
+* Tested up to: 6.6.2
+* Stable tag: 2.1.0
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Text Domain: oik-presentation
@@ -26,6 +26,9 @@ Use in conjunction with the oobit theme.
 1. oik-presentation in action
 
 ## Upgrade Notice 
+# 2.1.0 
+Update for suport in block based themes.
+
 # 2.0.1 
 Update for support for PHP 8.1 and PHP 8.2
 
@@ -40,8 +43,16 @@ Depends on oik base plugin v2.1-alpha or higher and oik-fields v1.19.0905 or hig
 Depends on oik and oik-fields
 
 ## Changelog 
+# 2.1.0 
+* Changed: Implement [oik_presentation_navigation] shortcode #1
+* Changed: Don't bw_flush() within oikp_lazy_nav() #1
+* Changed: Add block.json for oik-presentation/navigation block #1
+* Tested: With WordPress 6.6.2 and WordPress Multisite
+* Tested: With PHP 8.3
+* Tested: With PHPUnit 9.6
+
 # 2.0.1 
-* Changed: Add PHPUnit tests for support PHP 8.1 and PHP 8.2,,https://github.com/bobbingwide/oik-presentation/issues/3
+* Changed: Add PHPUnit tests for support PHP 8.1 and PHP 8.2,https://github.com/bobbingwide/oik-presentation/issues/3
 * Tested: With WordPress 6.4.1 and WordPress Multisite
 * Tested: With PHP 8.1 and PHP 8.2
 * Tested: With PHPUnit 9.6

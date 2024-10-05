@@ -3,7 +3,7 @@
 Plugin Name: oik-presentation
 Plugin URI: https://www.oik-plugins.com/oik-presentation
 Description: Presentation slides as WordPress custom post type
-Version: 2.0.1
+Version: 2.1.0
 Author: bobbingwide
 Author URI: https://www.bobbingwide.com/about-bobbing-wide
 License: GPL2
