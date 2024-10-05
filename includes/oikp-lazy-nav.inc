@@ -1,6 +1,6 @@
-<?php // (C) Copyright Bobbing Wide 2012, 2019
+<?php // (C) Copyright Bobbing Wide 2012, 2019, 2024
 /**
- * Create a nav menu for oik-preentation slides
+ * Create a nav menu for oik-presentation slides
  */
 function oikp_lazy_nav( $post ) {
   bw_trace2(); 
@@ -20,7 +20,7 @@ function oikp_lazy_nav( $post ) {
   $prev = oikp_prev( $post );
   alink( "prev", $prev, "prev" );
   etag( "nav" );
-  bw_flush();
+  //bw_flush();
 }  
 
 /* This is how it was coded in Twenty Eleven's single.php
