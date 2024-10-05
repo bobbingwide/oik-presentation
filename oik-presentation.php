@@ -8,7 +8,7 @@ Author: bobbingwide
 Author URI: https://www.bobbingwide.com/about-bobbing-wide
 License: GPL2
 
-    Copyright 2012-2013, 2019, 2023 Bobbing Wide (email : herb@bobbingwide.com )
+    Copyright 2012-2013, 2019, 2023, 2024 Bobbing Wide (email : herb@bobbingwide.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License version 2,
@@ -31,6 +31,8 @@ License: GPL2
  */
 function oik_presentation_init() {
   oik_presentation_register_oik_presentation();
+  oik_presentation_register_shortcodes();
+  oik_presentation_register_blocks();
 }
 
 /**
@@ -123,6 +125,7 @@ function oik_presentation_activation() {
  */
 function oik_presentation_navigation() {
   oikp_nav( true );
+  bw_flush();
 }
 
 /**
@@ -145,6 +148,34 @@ function oik_presentation_footer() {
   oik_require( "shortcodes/oik-fields.php", "oik-fields" );
   e( bw_metadata( array( "fields" => '_oikp_notes')) );   
   bw_flush();
+}
+
+function oik_presentation_register_shortcodes() {
+	bw_add_shortcode( 'oik_presentation_navigation', 'oik_presentation_navigation_shortcode');
+}
+
+function oik_presentation_register_blocks() {
+	$library_file = oik_require_lib( 'oik-blocks');
+	$args = [ 'render_callback' => 'oik_presentation_navigation_block' ];
+	$registered = register_block_type_from_metadata( __DIR__ .'/src/navigation', $args );
+	/*
+	$args = [ 'render_callback' => 'oik_presentation_footer_block' ];
+	$registered = register_block_type_from_metadata( __DIR__ .'/src/footer', $args );
+	*/
+
+}
+
+function oik_presentation_navigation_shortcode( $atts, $content, $tag ) {
+	oikp_nav();
+	$html = bw_ret();
+	return $html;
+
+}
+
+function oik_presentation_navigation_block() {
+	oikp_nav();
+	$html = bw_ret();
+	return $html;
 }
 
 /**
